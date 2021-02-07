@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #itme{
+        width: 100px;
+        height: 100px;
+        background-color:aquamarine;
+    }
+</style>
+<body>
+    <div id="itme">
+
+    </div>
+
+
+</body>
+<script>
+    // 获取id元素
+    let a = document.getElementById("itme");
+    // 绑定事件
+    a.addEventListener("click",function(){
+        setTimeout(() =>{
+        
+            this.style.background = 'pink'
+        },1000)
+    });
+
+    // 声明一个数组  返回偶数的元素
+    const arr = [1,6,9,10,100,25];
+    // const iarr = arr.filter(function(itme){
+    //         if (itme % 2 ===0 ) {
+    //             return true
+    //         }
+    //         else{
+    //             return false
+    //         }
+    // }
+    // )
+
+    const iarr = arr.filter(time => time%2===0);
+    console.log(iarr)
+
+    const iadd = arr.filter((time) =>{
+        return time % 2 ===0;
+    })
+    console.log(iadd)
+
+
+</script>
+</html>

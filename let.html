@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var items = document.getElementsByClassName("time")
+    for (let a = 0; a < items.length; a++) {
+        items[a].onclick = function () {
+            items[a].style.background = 'pink';
+        }
+    }
+
+    var tmp = new Date();
+
+    function f() {
+        console.log(tmp);
+        if (false) {
+            var tmp = 'hello world';
+        }
+    }
+
+    f(); // undefined
+
+</script>
+
+<style>
+    .time {
+        width: 100px;
+        height: 100px;
+        border: aquamarine 5px solid;
+    }
+</style>
+
+<body>
+
+    <div class="time"></div>
+    <div class="time"></div>
+    <div class="time"></div>
+
+</body>
+
+</html>

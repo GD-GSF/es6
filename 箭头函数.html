@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let fun = function(){
+
+        }
+
+        let fu = (a,b) =>{
+            return a+b;
+        }
+
+        let result = fu(1,2)
+        console.log(result)  //3
+        
+        function getName(){
+            console.log(this.name);
+        }
+
+        let c = () =>{
+            console.log(this.name);
+        }
+
+        window.name = '小烽';
+
+        const school= {
+            name:"叻仔"
+        }
+
+        // 直接调用
+        getName();
+        c();
+        
+        getName.call(school); //叻仔 普通函数 改变了指向
+        c.call(school); //小烽  箭头函数  call改变不了
+
+        // 箭头函数的this指向的值是在申明作用域下的值
+
+        
+        
+
+        
+    </script>
+    
+</body>
+</html>
