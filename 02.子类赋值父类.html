@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击</button>
+    <script>
+        class Father {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.btn = document.querySelector('button');
+                this.btn.onclick = this.son;
+            }
+            sum() {
+                console.log(this.x - this.y);
+                console.log(this.x);
+            }
+            son() {
+                console.log("我来了");
+            }
+        }
+
+        class Sou extends Father {
+            constructor(x, y) {
+                super(x, y)
+                this.x = x;
+                this.y = y;
+            }
+            sun() {
+                console.log(this.x + this.y);
+                console.log(this.x);
+            }
+        }
+
+        var obj = new Sou(3, 1);
+        obj.sun()
+        obj.sum()
+
+
+    </script>
+</body>
+
+</html>
